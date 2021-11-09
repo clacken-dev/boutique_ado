@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
@@ -15,6 +14,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51Ju1cJCVL6fX972lJGUEXagG6xY1kb1UqzZp8fiuHTtYnFNxOn3nzuOz37jP7YBCb8vfCXLzxSNnYVasbCmcQK1p00lE0hkIkq',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
